@@ -1,0 +1,8 @@
+{"name": "Clojure & its solution to the Expression Problem",
+ "description": "My Talk at Pune TechWeekend, 18/12/2010",
+ "sections": [{"section":"intro"},
+              {"section":"about-clojure"},
+              {"section":"reading-clojure"},
+              {"section":"expression-problem"},
+              {"section":"references"},
+              {"section":"thanks"}]}
