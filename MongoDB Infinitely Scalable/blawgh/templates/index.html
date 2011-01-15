@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+  <title>{{ title }}</title>
+
+  <link href="{{ url_for('static', filename='screen.css') }}" media="screen, projection" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div id="content">
+<section>
+<div id="addPost">
+<header>
+  <h2>Add a new post</h2>
+  <hr class="separator" />
+</header>
+<div class="form">
+  <ul class="form">
+    <form action="{{ url_for('create_post') }}" method="post">
+    <li>
+      <label for="postemail">Your Email</label>
+      <input id="posttitle" type="text" name="author_email" />
+    </li>
+    <li>
+      <label for="posttitle">Post Title</label>
+      <input id="posttitle" type="text" name="title" />
+    </li>
+    <li>
+      <label for="postcontent">Post Content</label>
+      <textarea id="postcontent" rows="10" name="body"></textarea>
+    </li>
+    <li>
+      <label for="posttags">Tags (comma separated)</label>
+      <input id="posttitle" type="text" name="tags" value="general" />
+    </li>
+    <li><input type="submit" name="submit" value="Blawgh it!" /></li>
+    </form>
+  </ul>
+</div>
+</div>
+</section>
+<hr class="separator" />
+
+<article>
+  {% for post in posts %}
+  <article>
+    <header>
+      <h2><a href="{{ url_for('show_post', post_id=post._id) }}">{{ post.title }}</a></h2>
+      <p class="timestamp">{{ post.created_at }}</p>
+    </header>
+    <p class="postContent">
+      {{ post.body }}
+    </p>
+  </article>
+  <hr class="separator" />
+  {% endfor %}
+</article>
+</div>
+
+
+</body>
+
+</html>

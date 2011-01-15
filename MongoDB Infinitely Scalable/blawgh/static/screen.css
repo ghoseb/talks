@@ -1,0 +1,499 @@
+@charset "UTF-8";
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/*
+    html5doctor.com Reset Stylesheet (Eric Meyer's Reset Reloaded + HTML5 baseline)
+    v1.4 2009-07-27 | Authors: Eric Meyer & Richard Clark
+    html5doctor.com/html-5-reset-stylesheet/
+*/
+/* line 18, ../src/_reset.scss */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* line 29, ../src/_reset.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 33, ../src/_reset.scss */
+nav ul {
+  list-style: none;
+}
+
+/* line 35, ../src/_reset.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 38, ../src/_reset.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 40, ../src/_reset.scss */
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* line 42, ../src/_reset.scss */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* line 44, ../src/_reset.scss */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+/* line 46, ../src/_reset.scss */
+del {
+  text-decoration: line-through;
+}
+
+/* line 48, ../src/_reset.scss */
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+/* tables still need cellspacing="0" in the markup */
+/* line 51, ../src/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 53, ../src/_reset.scss */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 0.75em 0;
+  padding: 0;
+}
+
+/* line 55, ../src/_reset.scss */
+input, select {
+  vertical-align: middle;
+}
+
+/* line 14, ../src/screen.scss */
+body {
+  background: #F5F5F5;
+  color: #333;
+  font: normal normal 14px/1.231 "Palatino Linotype", "Book Antiqua", Palatino, Georgia, "Times New Roman", serif;
+  text-align: center;
+  margin: 0 auto;
+  width: 820px;
+}
+
+/* line 24, ../src/screen.scss */
+h1, h2, h3, h4, h5, h6 {
+  font: bold 14/1.2 "Helvetica Neue", Helvetica, Arial, Geneva, Verdana, sans-serif;
+}
+
+/* line 28, ../src/screen.scss */
+h1 {
+  font-size: 22px;
+}
+
+/* line 29, ../src/screen.scss */
+h2 {
+  font-size: 20px;
+}
+
+/* line 30, ../src/screen.scss */
+h3 {
+  font-size: 18px;
+}
+
+/* line 31, ../src/screen.scss */
+h4 {
+  font-size: 16px;
+}
+
+/* line 32, ../src/screen.scss */
+h5 {
+  font-size: 14px;
+}
+
+/* line 34, ../src/screen.scss */
+a {
+  color: #1E83CB;
+  cursor: pointer;
+  text-decoration: none;
+}
+/* line 38, ../src/screen.scss */
+a:hover {
+  text-decoration: underline;
+}
+/* line 41, ../src/screen.scss */
+a:active {
+  outline: 0;
+  position: relative;
+  top: 1px;
+}
+/* line 46, ../src/screen.scss */
+a:focus {
+  outline: 1px;
+}
+
+/* line 49, ../src/screen.scss */
+ol {
+  list-style: decimal;
+  margin: 0 20px 20px 0;
+}
+
+/* line 50, ../src/screen.scss */
+ul {
+  list-style: none;
+  margin: 0 20px 20px 0;
+}
+/* line 11, ../../../../../../var/lib/gems/1.8/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/utilities/lists/_bullets.scss */
+ul li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0px;
+}
+
+/* Remove margins for navigation lists */
+/* line 53, ../src/screen.scss */
+nav ul, nav li {
+  margin: 0;
+}
+
+/* line 55, ../src/screen.scss */
+td, td img {
+  vertical-align: top;
+}
+
+/* line 57, ../src/screen.scss */
+sub {
+  vertical-align: sub;
+  font-size: smaller;
+}
+
+/* line 58, ../src/screen.scss */
+sup {
+  vertical-align: super;
+  font-size: smaller;
+}
+
+/* line 60, ../src/screen.scss */
+pre {
+  padding: 15px;
+  /* www.pathf.com/blogs/2008/05/formatting-quoted-code-in-blog-posts-css21-white-space-pre-wrap/ */
+  white-space: pre;
+  /* CSS2 */
+  white-space: pre-wrap;
+  /* CSS 2.1 */
+  white-space: pre-line;
+  /* CSS 3 (and 2.1 as well, actually) */
+  word-wrap: break-word;
+  /* IE */
+}
+
+/* line 70, ../src/screen.scss */
+::-moz-selection {
+  background: #85D8D5;
+  color: #fff;
+  text-shadow: none;
+}
+
+/* line 75, ../src/screen.scss */
+::selection {
+  background: #85D8D5;
+  color: #fff;
+  text-shadow: none;
+}
+
+/*  j.mp/webkit-tap-highlight-color */
+/* line 82, ../src/screen.scss */
+a:link, a:visited {
+   color: #333;
+  -webkit-tap-highlight-color: #333;
+}
+
+
+/* line 84, ../src/screen.scss */
+p {
+  margin-bottom: 10px;
+  word-wrap: break-word;
+}
+
+/* Align checkboxes, radios, text inputs with their label
+   by: Thierry Koblentz tjkdesign.com/ez-css/css/base.css  */
+/* line 3, ../src/_form.scss */
+input[type="radio"] {
+  vertical-align: text-bottom;
+}
+
+/* line 4, ../src/_form.scss */
+input[type="checkbox"] {
+  vertical-align: bottom;
+}
+
+/* Hand cursor on clickable input elements */
+/* line 7, ../src/_form.scss */
+label, input[type=button], input[type=submit], button {
+  cursor: pointer;
+}
+
+/* Webkit browsers add a 2px margin outside the chrome of form elements */
+/* line 10, ../src/_form.scss */
+button, input, select, textarea {
+  margin: 0;
+}
+
+/* Colors for form validity */
+/* To prevent Safari from applying its own style to search boxes */
+/* line 23, ../src/_form.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+}
+
+/* Basic styling for input elements across the Qotd App */
+/* line 31, ../src/_form.scss */
+textarea,
+input[type="text"],
+input[type="email"],
+input[type="search"],
+input[type="password"] {
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -o-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  border-radius: 3px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 0 8px inset;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 0 8px inset;
+  -o-box-shadow: rgba(0, 0, 0, 0.15) 0 0 8px inset;
+  box-shadow: rgba(0, 0, 0, 0.15) 0 0 8px inset;
+  background: #FFF;
+  border: 1px solid #cfcfcf;
+  color: #444;
+  margin: 0;
+  overflow: visible;
+  padding: 5px;
+}
+
+/* line 44, ../src/_form.scss */
+input[type="text"],
+input[type="email"],
+input[type="search"],
+input[type="password"] {
+  min-width: 400px;
+  height: 30px;
+}
+
+/* line 48, ../src/_form.scss */
+input[type="email"] {
+  min-width: 250px;
+}
+
+/* line 51, ../src/_form.scss */
+textarea {
+  min-width: 400px;
+}
+
+/* line 58, ../src/_form.scss */
+button, input,
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* Prevent Firefox from adding extra padding to buttons */
+/* line 63, ../src/_form.scss */
+button::-moz-focus-inner {
+  padding: 0;
+  border: none;
+}
+
+/* Basic styling for buttons across the app */
+/* line 82, ../src/_form.scss */
+button, a.button {
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -o-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  border-radius: 3px;
+  background: #f0f0f0;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #f5f5f5), color-stop(100%, #e5e5e5));
+  background-image: -moz-linear-gradient(top, #f5f5f5 0%, #e5e5e5 100%);
+  background-image: linear-gradient(top, #f5f5f5 0%, #e5e5e5 100%);
+  text-shadow: white 0 1px 0;
+  border: 1px solid #cfcfcf;
+  color: #666;
+  display: inline-block;
+  font: normal bold 13/1.231 "Helvetica Neue", Helvetica, Arial, Geneva, Verdana, sans-serif;
+  padding: 5px 12px;
+  white-space: nowrap;
+}
+/* line 71, ../src/_form.scss */
+button:hover, a.button:hover {
+  background: #e5e5e5;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #fafafa), color-stop(100%, #eaeaea));
+  background-image: -moz-linear-gradient(top, #fafafa 0%, #eaeaea 100%);
+  background-image: linear-gradient(top, #fafafa 0%, #eaeaea 100%);
+}
+/* line 75, ../src/_form.scss */
+button:active, a.button:active {
+  background: #f5f5f5;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #e5e5e5), color-stop(100%, #f5f5f5));
+  background-image: -moz-linear-gradient(top, #e5e5e5 0%, #f5f5f5 100%);
+  background-image: linear-gradient(top, #e5e5e5 0%, #f5f5f5 100%);
+}
+/* line 93, ../src/_form.scss */
+button:hover, a.button:hover {
+  color: #333;
+  border: 1px solid #b6b6b6;
+  text-decoration: none;
+}
+/* line 98, ../src/_form.scss */
+button:active, a.button:active {
+  outline: 0 none;
+  -moz-outline: 0 none;
+}
+
+/* line 105, ../src/_form.scss */
+.form {
+  list-style: none;
+  margin: 0 10px 10px 0;
+}
+/* line 11, ../../../../../../var/lib/gems/1.8/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/utilities/lists/_bullets.scss */
+.form li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0px;
+}
+/* line 108, ../src/_form.scss */
+.form li {
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -o-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  border-radius: 3px;
+  background: #F5F5F5;
+  color: #444;
+  display: block;
+  margin: 0 0 10px 0;
+  overflow: hidden;
+  padding: 3px;
+}
+/* line 116, ../src/_form.scss */
+.form li label {
+  display: block;
+  margin-bottom: 3px;
+}
+/* line 120, ../src/_form.scss */
+.form li:first-child, .form li.first {
+  margin-left: 0;
+}
+/* line 122, ../src/_form.scss */
+.form li.last, .form li:last-child {
+  margin-right: 0;
+  margin-bottom: 0;
+}
+
+/* line 91, ../src/screen.scss */
+hr.separator {
+  background: transparent;
+  border: 1px solid #DCDCDC;
+  border-width: 1px 0 1px;
+  border-bottom-color: #FFF;
+  height: 0;
+  padding: 0;
+}
+
+/* line 100, ../src/screen.scss */
+hr.dotted {
+  background: transparent;
+  border: 1px dotted #CCC;
+  border-width: 0 0 1px;
+}
+
+/* line 106, ../src/screen.scss */
+.clearfix {
+  zoom: 1;
+}
+/* line 108, ../src/screen.scss */
+.clearfix:before, .clearfix:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+/* line 114, ../src/screen.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/* line 118, ../src/screen.scss */
+#content {
+  margin-top: 30px;
+  text-align: left;
+}
+
+/* line 123, ../src/screen.scss */
+#addPost {
+  margin: 0px auto;
+  width: 500px;
+}
+
+/* line 129, ../src/screen.scss */
+.timestamp {
+  font-size: 12px;
+  color: #666;
+}
+
+/* line 133, ../src/screen.scss */
+.postInfo, .postAuthor {
+  font-weight: bold;
+  color: #666;
+}
+
+/* line 139, ../src/screen.scss */
+.comments .comment {
+  margin-top: 10px;
+  border-bottom: 1px dotted #CCC;
+}

@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+  <title>{{ post.title }} | Blawgh!</title>
+
+  <link href="{{ url_for('static', filename='screen.css') }}" media="screen, projection" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div id="content">
+
+<article>
+  <article>
+    <header>
+      <h2>{{ post.title }}</h2>
+      <p class="timestamp">{{ post.created_at }}</p>
+    </header>
+    <p class="postContent">
+      {{ post.body }}
+    </p>
+    <p class="postAuthor">by {{ post.author_name }}</p>
+    <hr class="separator" /> 
+  </article>
+  <article class="comments">
+    <ul>
+      {% for comment in post.comments %}
+      <li class="comment">
+        <p class="commentAuthor">{{ comment.author }}</p>
+        <p>{{ comment.body }}</p>
+        <p class="timestamp">{{ comment.posted_at }}</p>
+      </li>
+      {% endfor %}
+    </ul>
+  </article>
+</article>
+<section>
+<div id="addPost">
+<header>
+  <h2>Add a new comment</h2>
+  <hr class="separator" />
+</header>
+<div class="form">
+  <ul class="form">
+    <form action="{{ url_for('create_comment', post_id=post._id) }}" method="post">
+    <li>
+      <label for="postemail">Your Name</label>
+      <input id="posttitle" type="text" name="author" />
+    </li>
+    <li>
+      <label for="posttitle">Your Email</label>
+      <input id="posttitle" type="text" name="email" />
+    </li>
+    <li>
+      <label for="postcontent">Comment</label>
+      <textarea id="postcontent" rows="10" name="body"></textarea>
+    </li>
+    <li><input type="submit" name="submit" value="Hit it!" /></li>
+    </form>
+  </ul>
+</div>
+</div>
+</section>
+</div>
+</body>
+</html>
